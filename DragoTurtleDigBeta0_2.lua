@@ -117,6 +117,11 @@ for var = 1, hauteur, 1 do
 	end
 end
 
+turtle.select(1)
+if turtle.getFuelLevel() < hauteur then
+		turtle.refuel(math.ceil(longueur/80))
+end
+
 for var = 1, hauteur - 1 , 1 do
 	turtle.up()
 end
